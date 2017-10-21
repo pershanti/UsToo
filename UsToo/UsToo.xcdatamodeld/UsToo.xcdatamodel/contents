@@ -2,18 +2,19 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="AssaultType" representedClassName="AssaultType" syncable="YES" codeGenerationType="class">
         <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Entity" inverseName="assault_type" inverseEntity="Entity" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Entity" inverseName="assault_type" inverseEntity="Entity" syncable="YES"/>
     </entity>
     <entity name="Entity" representedClassName="Entity" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="iD" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="injury" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="knowsPerp" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="perpType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="willReport" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="assault_type" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AssaultType" inverseName="newRelationship" inverseEntity="AssaultType" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Entity" positionX="-153" positionY="-133" width="128" height="133"/>
-        <element name="AssaultType" positionX="-405" positionY="9" width="128" height="73"/>
+        <element name="Entity" positionX="-603" positionY="-324" width="128" height="148"/>
+        <element name="AssaultType" positionX="-380" positionY="-315" width="128" height="73"/>
     </elements>
 </model>

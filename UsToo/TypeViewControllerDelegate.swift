@@ -8,7 +8,6 @@
 
 import Foundation
 
-import Foundation
 import UIKit
 
 protocol TypeViewControllerDelegate: class {

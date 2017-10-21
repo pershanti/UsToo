@@ -57,6 +57,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="coW-Xs-9Y8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rWo-rJ-SK6">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -178,11 +179,18 @@
         <!--Report An Assault-->
         <scene sceneID="Sw2-t0-2Fv">
             <objects>
-                <tableViewController id="lNb-gB-kSF" sceneMemberID="viewController">
+                <tableViewController id="lNb-gB-kSF" customClass="FormViewController" customModule="UsToo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OcO-JL-iP3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <datePicker key="tableFooterView" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="O6F-6R-F3A">
+                            <rect key="frame" x="0.0" y="271" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <date key="date" timeIntervalSinceReferenceDate="530316758.15155798">
+                                <!--2017-10-21 22:12:38 +0000-->
+                            </date>
+                        </datePicker>
                         <sections>
                             <tableViewSection id="0hY-py-STw">
                                 <cells>
@@ -226,11 +234,17 @@
                                                     <rect key="frame" x="337" y="6" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="No"/>
+                                                    <connections>
+                                                        <action selector="doesntKnow:" destination="lNb-gB-kSF" eventType="touchUpInside" id="T1s-oL-HDX"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybs-r1-823">
                                                     <rect key="frame" x="299" y="6" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Yes"/>
+                                                    <connections>
+                                                        <action selector="knows:" destination="lNb-gB-kSF" eventType="touchUpInside" id="keO-Ql-CSx"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -253,11 +267,17 @@
                                                     <rect key="frame" x="337" y="5" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="No"/>
+                                                    <connections>
+                                                        <action selector="injureNo:" destination="lNb-gB-kSF" eventType="touchUpInside" id="dqz-eU-tjM"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4w-9J-W1G">
                                                     <rect key="frame" x="299" y="6" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Yes"/>
+                                                    <connections>
+                                                        <action selector="injureYes:" destination="lNb-gB-kSF" eventType="touchUpInside" id="QIF-a8-0SG"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -280,11 +300,17 @@
                                                     <rect key="frame" x="299" y="8" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Yes"/>
+                                                    <connections>
+                                                        <action selector="policeYes:" destination="lNb-gB-kSF" eventType="touchUpInside" id="bvH-EV-ZhT"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXQ-yp-ALC">
                                                     <rect key="frame" x="337" y="8" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="No"/>
+                                                    <connections>
+                                                        <action selector="policeNo:" destination="lNb-gB-kSF" eventType="touchUpInside" id="VHK-tp-uvG"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -313,6 +339,30 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="W1D-Ep-tYQ">
+                                        <rect key="frame" x="0.0" y="227" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W1D-Ep-tYQ" id="C9F-th-Cn4">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date occured" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJq-fe-jdZ">
+                                                    <rect key="frame" x="8" y="11" width="103" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8c2-cE-loy">
+                                                    <rect key="frame" x="450" y="-60" width="44" height="162"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <date key="date" timeIntervalSinceReferenceDate="530316687.873088">
+                                                        <!--2017-10-21 22:11:27 +0000-->
+                                                    </date>
+                                                </datePicker>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -322,8 +372,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Report An Assault" id="aW8-MK-VbS" userLabel="Report an Assault">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="kUS-4t-9dx"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="hVA-lu-fLN"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="kUS-4t-9dx">
+                            <connections>
+                                <action selector="cancelPressed:" destination="b9B-K0-TOf" id="C2Q-34-Fae"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="hVA-lu-fLN">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="b9B-K0-TOf" id="Fn7-Kr-6X7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="Abm-Qu-VPL" kind="popoverPresentation" identifier="TypePopupSegue" id="nm3-cO-6mj">
@@ -332,6 +390,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FmB-PN-jVJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="b9B-K0-TOf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1461.5999999999999" y="-1211.2443778110946"/>
         </scene>

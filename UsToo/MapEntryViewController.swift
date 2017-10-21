@@ -8,12 +8,24 @@
 
 import UIKit
 
-class MapEntryViewController: UIViewController {
+class MapEntryViewController: UIViewController, FormViewControllerDelegate  {
 
     @IBAction func useCurrent(_ sender: UIButton) {
         
         performSegue(withIdentifier: "DataEntrySegue", sender: self)
         
+    }
+    
+    func finalize(_ by: UITableViewController, willReport: Bool, notes: String, location: String, knowsPerp: Bool, injury: Bool, event_date: Date){
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DataEntrySegue"{
+            let navigationController = segue.destination as! UINavigationController
+            let controller = navigationController.topViewController as! FormViewControllerDelegate
+            controller.delegate = self
+        }
     }
     
     

@@ -23,7 +23,7 @@ class TypeViewController: UITableViewController {
 
     @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
-        delegate?.doneButton(self, assaultList: picked)
+        delegate?.updateType(self, assaultList: picked)
         
     }
     
