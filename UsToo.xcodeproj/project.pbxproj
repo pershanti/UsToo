@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		56D7255B1F9BC09200920712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D7255A1F9BC09200920712 /* AppDelegate.swift */; };
-		56D7255D1F9BC09200920712 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D7255C1F9BC09200920712 /* ViewController.swift */; };
 		56D725601F9BC09200920712 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D7255E1F9BC09200920712 /* Main.storyboard */; };
 		56D725631F9BC09200920712 /* UsToo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56D725611F9BC09200920712 /* UsToo.xcdatamodeld */; };
 		56D725651F9BC09200920712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D725641F9BC09200920712 /* Assets.xcassets */; };
 		56D725681F9BC09200920712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D725661F9BC09200920712 /* LaunchScreen.storyboard */; };
 		56D725731F9BC47C00920712 /* ResourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D725721F9BC47C00920712 /* ResourceViewController.swift */; };
 		56D725751F9BC8DC00920712 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D725741F9BC8DC00920712 /* FormViewController.swift */; };
+		56D725771F9BE00500920712 /* MapEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D725761F9BE00500920712 /* MapEntryViewController.swift */; };
+		56D725791F9BE02100920712 /* DataMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D725781F9BE02100920712 /* DataMapViewController.swift */; };
+		56D7257B1F9BE13700920712 /* TypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D7257A1F9BE13700920712 /* TypeViewController.swift */; };
+		56D7257D1F9BE2E900920712 /* TypeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D7257C1F9BE2E900920712 /* TypeViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		56D725571F9BC09200920712 /* UsToo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsToo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56D7255A1F9BC09200920712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		56D7255C1F9BC09200920712 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		56D7255F1F9BC09200920712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56D725621F9BC09200920712 /* UsToo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UsToo.xcdatamodel; sourceTree = "<group>"; };
 		56D725641F9BC09200920712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,6 +30,10 @@
 		56D725691F9BC09200920712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56D725721F9BC47C00920712 /* ResourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceViewController.swift; sourceTree = "<group>"; };
 		56D725741F9BC8DC00920712 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		56D725761F9BE00500920712 /* MapEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapEntryViewController.swift; sourceTree = "<group>"; };
+		56D725781F9BE02100920712 /* DataMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMapViewController.swift; sourceTree = "<group>"; };
+		56D7257A1F9BE13700920712 /* TypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeViewController.swift; sourceTree = "<group>"; };
+		56D7257C1F9BE2E900920712 /* TypeViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,14 +67,17 @@
 			isa = PBXGroup;
 			children = (
 				56D7255A1F9BC09200920712 /* AppDelegate.swift */,
-				56D7255C1F9BC09200920712 /* ViewController.swift */,
 				56D7255E1F9BC09200920712 /* Main.storyboard */,
+				56D7257C1F9BE2E900920712 /* TypeViewControllerDelegate.swift */,
+				56D725781F9BE02100920712 /* DataMapViewController.swift */,
+				56D725761F9BE00500920712 /* MapEntryViewController.swift */,
 				56D725741F9BC8DC00920712 /* FormViewController.swift */,
 				56D725721F9BC47C00920712 /* ResourceViewController.swift */,
 				56D725641F9BC09200920712 /* Assets.xcassets */,
 				56D725661F9BC09200920712 /* LaunchScreen.storyboard */,
 				56D725691F9BC09200920712 /* Info.plist */,
 				56D725611F9BC09200920712 /* UsToo.xcdatamodeld */,
+				56D7257A1F9BE13700920712 /* TypeViewController.swift */,
 			);
 			path = UsToo;
 			sourceTree = "<group>";
@@ -145,11 +154,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56D725771F9BE00500920712 /* MapEntryViewController.swift in Sources */,
 				56D725631F9BC09200920712 /* UsToo.xcdatamodeld in Sources */,
-				56D7255D1F9BC09200920712 /* ViewController.swift in Sources */,
 				56D725731F9BC47C00920712 /* ResourceViewController.swift in Sources */,
+				56D7257D1F9BE2E900920712 /* TypeViewControllerDelegate.swift in Sources */,
+				56D7257B1F9BE13700920712 /* TypeViewController.swift in Sources */,
 				56D725751F9BC8DC00920712 /* FormViewController.swift in Sources */,
 				56D7255B1F9BC09200920712 /* AppDelegate.swift in Sources */,
+				56D725791F9BE02100920712 /* DataMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
