@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreData
+
 
 class FormViewController: UITableViewController, TypeViewControllerDelegate {
 
@@ -28,16 +30,15 @@ class FormViewController: UITableViewController, TypeViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
     }
 
-    func doneButton(_ by: UITableViewController, assaultList: [String]) {
+    func updateType(_ by: UITableViewController, assaultList: [String]) {
         dismiss(animated: true, completion: nil)
+        
+        let item = NSEntityDescription.insertNewObject(forEntityName: "Entity", into: managedObjectContext) as! Entity
+    
+            item.type = assaultList
         
         }
     

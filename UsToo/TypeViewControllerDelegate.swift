@@ -12,5 +12,5 @@ import Foundation
 import UIKit
 
 protocol TypeViewControllerDelegate: class {
-    func doneButton(_ by: UITableViewController, assaultList: [String])
+    func updateType(_ by: UITableViewController, assaultList: [String])
 }

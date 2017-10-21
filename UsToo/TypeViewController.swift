@@ -11,7 +11,23 @@ import UIKit
 class TypeViewController: UITableViewController {
     
     weak var delegate: FormViewController?
+    
+    var picked: [String] = []
+    
+    var assault_array: [String] = ["Catcalling", "Clothes Torn", "Blocked from Moving", "Groping", "Hit/punched/beaten/choked/bruised", "Kidnapping", "Rape", "Stalking", "Theft", "Threats/Intimidation", "Verbal Abuse", "Violation of mouth/vagina/anus", "Weapon Use"]
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let tapped = self.assault_array[indexPath.row]
+        picked.append(tapped)
+    }
 
+    @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+        delegate?.doneButton(self, assaultList: picked)
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
