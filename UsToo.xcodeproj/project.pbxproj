@@ -13,6 +13,7 @@
 		56D725631F9BC09200920712 /* UsToo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56D725611F9BC09200920712 /* UsToo.xcdatamodeld */; };
 		56D725651F9BC09200920712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D725641F9BC09200920712 /* Assets.xcassets */; };
 		56D725681F9BC09200920712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D725661F9BC09200920712 /* LaunchScreen.storyboard */; };
+		56D725731F9BC47C00920712 /* ResourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D725721F9BC47C00920712 /* ResourceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		56D725641F9BC09200920712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56D725671F9BC09200920712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56D725691F9BC09200920712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56D725721F9BC47C00920712 /* ResourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				56D7255A1F9BC09200920712 /* AppDelegate.swift */,
 				56D7255C1F9BC09200920712 /* ViewController.swift */,
 				56D7255E1F9BC09200920712 /* Main.storyboard */,
+				56D725721F9BC47C00920712 /* ResourceViewController.swift */,
 				56D725641F9BC09200920712 /* Assets.xcassets */,
 				56D725661F9BC09200920712 /* LaunchScreen.storyboard */,
 				56D725691F9BC09200920712 /* Info.plist */,
@@ -141,6 +144,7 @@
 			files = (
 				56D725631F9BC09200920712 /* UsToo.xcdatamodeld in Sources */,
 				56D7255D1F9BC09200920712 /* ViewController.swift in Sources */,
+				56D725731F9BC47C00920712 /* ResourceViewController.swift in Sources */,
 				56D7255B1F9BC09200920712 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
