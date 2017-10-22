@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import MapKit
 
-class MapEntryViewController: UIViewController, FormViewControllerDelegate  {
+class MapEntryViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate  {
+    
 
     @IBAction func useCurrent(_ sender: UIButton) {
         
@@ -16,22 +18,28 @@ class MapEntryViewController: UIViewController, FormViewControllerDelegate  {
         
     }
     
-    func finalize(_ by: UITableViewController, willReport: Bool, notes: String, location: String, knowsPerp: Bool, injury: Bool, event_date: Date){
-        
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DataEntrySegue"{
             let navigationController = segue.destination as! UINavigationController
-            let controller = navigationController.topViewController as! FormViewControllerDelegate
-            controller.delegate = self
+            let controller = navigationController.topViewController as! FormViewController
+            controller.location = mapView.userLocation.location
         }
     }
+    
+    @IBOutlet weak var mapView: MKMapView!
+    let manager = CLLocationManager()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
+        mapView.delegate = self
+        mapView.mapType = MKMapType.standard
+        
         // Do any additional setup after loading the view.
     }
     

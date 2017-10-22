@@ -42,9 +42,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Giz-w8-NrY"/>
                     <connections>
-                        <segue destination="smx-ma-CQt" kind="popoverPresentation" identifier="DataEntrySegue" id="hPH-eL-LyS">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
+                        <outlet property="mapView" destination="QCG-ie-2kP" id="t4T-Ex-qzF"/>
+                        <segue destination="smx-ma-CQt" kind="presentation" identifier="DataEntrySegue" id="hPH-eL-LyS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -117,6 +116,9 @@
                         <viewLayoutGuide key="safeArea" id="CZV-WO-BMD"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="meB-Ye-Pzc"/>
+                    <connections>
+                        <outlet property="mapView" destination="ycU-i9-U4f" id="G1m-al-74r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F2t-X9-OBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -384,9 +386,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="Abm-Qu-VPL" kind="popoverPresentation" identifier="TypePopupSegue" id="nm3-cO-6mj">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
+                        <outlet property="eventDate" destination="O6F-6R-F3A" id="8cp-3x-Fdj"/>
+                        <segue destination="Abm-Qu-VPL" kind="presentation" identifier="TypePopupSegue" id="nm3-cO-6mj"/>
+                        <segue destination="Xrf-60-jYN" kind="presentation" identifier="goToMap" id="0bZ-FI-JIQ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FmB-PN-jVJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -413,4 +415,7 @@
             <point key="canvasLocation" x="903" y="-1961"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="LNj-bj-NBU"/>
+    </inferredMetricsTieBreakers>
 </document>

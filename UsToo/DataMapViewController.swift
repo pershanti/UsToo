@@ -7,13 +7,21 @@
 //
 
 import UIKit
+import MapKit
 
-class DataMapViewController: UIViewController {
+class DataMapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate   {
+    
+    let manager = CLLocationManager()
 
+    @IBOutlet weak var mapView: MKMapView!
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
+        mapView.delegate = self
+        mapView.mapType = MKMapType.standard
     }
 
     override func didReceiveMemoryWarning() {

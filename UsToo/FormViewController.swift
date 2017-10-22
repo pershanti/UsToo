@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import MapKit
 
 
 class FormViewController: UITableViewController, TypeViewControllerDelegate {
@@ -37,25 +38,36 @@ class FormViewController: UITableViewController, TypeViewControllerDelegate {
         willReport = false
     }
     
+    @IBOutlet weak var eventDate: UIDatePicker!
     var willReport: Bool? = false
     var notes: String? = ""
-    var location: String? = ""
+    var location: CLLocation?
     var knowsPerp: Bool? = false
     var injury: Bool? = false
-    var event_date: Date? = Date()
+    
+    var newEntity: Entity?
+    
+    
+     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
-        delegate?.finalize(self, willReport: self.willReport, notes: self.notes, location: self.location, knowsPerp: self.knowsPerp, injury: self.injury, event_date: self.event_date)
+        
+        newEntity?.willReport = self.willReport!
+        newEntity?.notes = self.notes!
+        newEntity?.date = self.eventDate.date
+        newEntity?.knowsPerp = self.knowsPerp!
+        newEntity?.location = self.location!
+        
+        performSegue(withIdentifier: "goToMap", sender: self)
     }
+    
     
     @IBAction func cancelPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
     
-    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var newEntity: Entity?
+   
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any? ) {
         
